@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Type Comment Box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    *{
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: wheat;
+    }
+    #commentInput , #fileInput, button {
+        font-size: 2rem;
+        margin-top: 2rem;
+
+    }
+    h1{
+        font-size: 8rem;
+        position: relative;
+        
+        text-align: center;
+        background-color: black;
+        color: #fff;
+    }
+    h1 span{
+        color:rgb(234, 159, 18);
+    }
+    p{
+        font-size:2rem ;
+    }
+    .container{
+        display: flex;
+    }
+    .right-col{
+        padding: 10rem;
+        padding-left: 40rem;
+    
+    }
+    .left-col{
+        background-color: wheat;
+    position:relative;
+    width:25rem;
+    left: 5rem;
+    top: 5rem;
+    }
+    svg{
+        font-size: 10rem;
+        position: relative;
+        bottom: 5rem;
+    }
+    a{
+     
+      color: #fff;
+      font-size:2rem ;
+      position: relative;
+      bottom: 6rem;
+    }
+    b a{
+      color: wheat;
+    }
+    
+</style>
+<body>
+    <!-- <h1>File Type Comment Box</h1>
+    <input type="file" id="fileInput">
+    <br>
+    <textarea id="commentInput" rows="4" cols="50" placeholder="Enter your comments here"></textarea>
+    <button onclick="submitComment()">Submit</button> -->
+    
+<h1><span>A</span>ssesment </h1>
+<b><a href="./index.html"><i class="fa-solid fa-house" style="color: #fafcff;position:relative;font-size:2rem;margin-right:1rem"></i>Home</a></b>
+<div class="container">
+<div class="left-col">
+    <div >
+        <input type="text" id="commentInput" placeholder="Enter your comment...">
+        <input type="file" id="fileInput">
+        <button onclick="submitComment()">Submit</button>
+      </div>
+      <div id="submissionResult" style="display: none; ">
+        <p><strong>Comment:</strong></p>
+        <p id="creommentDisplay"></p>
+        <p><strong>Uploaded file:</strong></p>
+        <p id="fileDisplay"></p>
+      </div>
+</div>
+<div class="right-col">
+    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H176c-35.3 0-64 28.7-64 64V512H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"/></svg>
+</div>
+ 
+      
+<div id="submissionResult" style="display: none;">
+  <p><strong>Comment:</strong></p>
+  <p id="commentDisplay"></p>
+  <p><strong>Uploaded file:</strong></p>
+  <p id="fileDisplay"></p>
+</div>
+</div> 
+<script>
+  // Function to handle the file selection
+  function handleFileSelect(event) {
+    const selectedFile = event.target.files[0];
+    console.log("Selected file:", selectedFile);
+  }
+
+  // Function to submit the comment and uploaded file
+  function submitComment() {
+    const commentInput = document.getElementById("commentInput");
+    const fileInput = document.getElementById("fileInput");
+    const selectedFile = fileInput.files[0];
+    const submissionResult = document.getElementById("submissionResult");
+    const commentDisplay = document.getElementById("commentDisplay");
+    const fileDisplay = document.getElementById("fileDisplay");
+
+/* if (commentInput.value.trim() === "") {
+      alert("Please enter your comments.");
+      return;
+    }*/
+    if (!selectedFile) {
+      alert("Please select a file.");
+      return;
+    }
+
+    // Display the comment and uploaded file on the screen
+    commentDisplay.textContent = commentInput.value;
+    fileDisplay.textContent = selectedFile.name;
+    submissionResult.style.display = "block";
+
+    // Here, you can handle the comment and uploaded file as needed (e.g., send it to the server).
+    console.log("Comment:", commentInput.value);
+    console.log("Uploaded file:", selectedFile);
+
+    // Clear the input fields after submission
+    commentInput.value = "";
+    fileInput.value = "";
+  }
+
+  // Add event listener for file selection
+  document.getElementById("fileInput").addEventListener("change", handleFileSelect);
+</script>
+
+</body>
+</html>

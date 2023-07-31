@@ -1,0 +1,327 @@
+/* ---------- font family -----------------  */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&display=swap");
+
+/* ---------- / font family -----------------  */
+
+
+/* ---------------global-------------------- */
+*{
+    overflow-x: hidden;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.green {
+    border: wheat solid 1px;
+    border: 50%;
+}
+
+.heading {
+    text-decoration: line-through;
+    text-decoration-color: wheat;
+}
+
+p {
+    font-size: 1.15em;
+}
+
+.c {
+    color: rgb(234, 159, 18);
+}
+
+.menu {
+    animation: example 7s eas;
+}
+
+@keyframes example {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    100% {
+        left: 0px;
+        top: 50px;
+    }
+}
+
+
+/* ---------------/ global-------------------- */
+
+
+/* --------------------------navigation ----------------------- */
+
+.navigation-back {
+    background-color:  black !important;
+    z-index: 100;
+}
+
+.navigation nav a:hover {
+    color: wheat;
+}
+
+.navigation .logo {
+    font-size: 2rem;
+}
+
+.navigation ul li {
+    display: inline-block;
+    margin: 0px 20px;
+    font-size: 1rem;
+}
+
+.navigation .talk {
+    border:wheat solid 1px !important;
+    border-radius: 0px;
+    color: wheat;
+    border: none;
+    padding: 5px 8px;
+}
+
+.navigation .talk:hover {
+    background-color:wheat;
+    color: black;
+    font-weight: bolder;
+}
+
+.navigation .menu i {
+    font-size: 25px;
+    color: white;
+}
+
+.navigation #toggler a:hover {
+    color: wheat;
+}
+
+.navigation .menu i:hover {
+    color:wheat;
+}
+
+
+/* --------------------------/ navigation ----------------------- */
+
+
+/* -----------------header------------------- */
+
+.headback {
+    
+        background-color: rgb(152, 102, 199);
+    
+    
+}
+
+.header .profile-container {
+    width: 100%;
+}
+
+.header .profile {
+    /* border-radius: 50%; */
+    width: 100%;
+}
+
+.header .links span {
+    margin: 0px 10px;
+}
+
+.header .links i {
+    font-size: 25px;
+}
+
+.header .links span i:hover {
+    color: wheat;
+}
+
+
+/* -----------------/ header------------------- */
+
+
+/* --------------------about -------------------- */
+
+.aboutback {
+    background-color: rgb(236, 232, 226);
+    color: black;
+}
+
+.about .aprofile-container {
+    width: 100%;
+}
+
+
+/* * --------------------/about -------------------- */
+
+
+/* -----------------------skills ---------------------- */
+
+#skills h4:hover {
+    color: wheat;
+}
+
+.skillback {
+    background-color: #36454F ;
+}
+
+
+/* -----------------------/ skills ---------------------- */
+
+
+/* ----------------------------Projects ----------------------- */
+/* 
+.projects {
+    background-color: #232B2B;
+}
+
+.projects .cards {
+    background-color: #0a1540;
+    border-radius: 5px;
+}
+
+.projects p {
+    font-size: 0.8em;
+}
+
+.projects .fas:hover {
+    color: wheat;
+}
+
+.projects .more {
+    border: #09f200 solid 1px !important;
+    border-radius: 0px;
+    color: #09f200;
+    border: none;
+    padding: 5px 10px;
+}
+
+.projects .more:hover {
+    background-color: #09f200;
+    color: white;
+} */
+
+/*Service Section*/
+.service-swipe {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.7)),url("images/extra/b3.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+.service-swipe .s-card img {
+	width: 100px;
+}
+.service-swipe a {
+	padding: 0;
+	margin: 40px 10px;
+}
+.service-swipe .s-card {
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+	align-items: center;
+	text-align: center;
+	width: 350px;
+	height: 200px;
+	box-shadow: inset 0 0 20px rgba(255,255,255,0.05),
+					0 0 50px rgba(0,0,0,0.8);
+	border-radius: 5px;
+	cursor: pointer;
+	transition-duration: .5s;
+}
+.service-swipe .s-card p {
+	color: black;
+	font-size: 1.2em;
+	font-family: 'Open Sans',sans-serif;
+}
+.service-swipe .s-card:hover {
+	box-shadow: 0 0 50px rgba(255,255,255,0.8);
+	transform: translateY(-10px);
+}
+/* ----------------------------/ Projects ----------------------- */
+
+
+/* ------------------------------Contact us ----------------------- */
+
+.contactus {
+    background-color: #7b94a5 ;
+}
+
+.contactus .name,
+.email,
+.text-area {
+    background-color:grey;
+    border: none;
+    border-bottom: wheat solid 1px;
+    color: black;
+    width: 100%;
+}
+
+.contactus .name:focus,
+.email:focus,
+.text-area:focus {
+    background-color: #fff;
+    border: none;
+    border-bottom: wheat solid 1px;
+    color: black;
+}
+
+.contactus .contact-card {
+    background-color: black;
+}
+
+.contactus .contact-card .form {
+    width: 100%;
+}
+
+.contactus .contact-card .send {
+    border: wheat solid 1px;
+    border-radius: 0px;
+    color: wheat;
+}
+
+.contactus .contact-card .send:hover {
+    border: none;
+    background-color: wheat;
+    border-radius: 0px;
+    color: black;
+}
+
+.copy p {
+    font-size: 0.7em;
+}
+
+.copy p a {
+    text-decoration: underline;
+    text-decoration-color: wheat;
+}
+
+
+/* ------------------------------/Contact us ----------------------- */
+
+
+/* media query  */
+
+.navigation .menu-toggle {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .navigation #toggler {
+        display: none !important;
+    }
+}
+
+
+/* / media query  */
